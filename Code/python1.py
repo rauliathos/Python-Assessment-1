@@ -78,7 +78,7 @@ print(one("hi","hello"))
 def two(string):
 	string.lower().split("bert")
 
-	return string.lower().split("bert",-1)
+	return string.lower().split("bert")
 
 print(two("bertclivebert"))
 print(two("xxBertfridgebERtyy"))
@@ -104,12 +104,22 @@ print(two("xxBertfridgebERtyy"))
 	# No Hints for this question
 
 def three(arg1):
-	return ""
+	if arg1 % 3 == 0:
+		return "fizz"
+	elif arg1 % 5 == 0:
+		return "buzz"
+	elif arg1 % 3 == 0 and arg1 % 5 == 0:
+   		return "fizzbuzz"
+
+
+
+print(three(15))
 
 
 	# <QUESTION 4>
 
-    # Given a string seperate the string into the individual numbers present, then add each digit of each number to get a final value for each number
+    # Given a string seperate the string into the individual numbers present, 
+	#then add each digit of each number to get a final value for each number
 
 	# String example = "55 72 86"
 	
@@ -130,7 +140,14 @@ def three(arg1):
 	# help(int) for working with numbers and help(str) for working with Strings.
 
 def four(arg1):
-	return ""
+	arg =arg1.split()
+	for num in arg:
+		sum=0
+		for i in range(0, len(num)):
+			sum+=int(num[i])
+	return sum
+
+print(four("55 72 86"))
 
 	# <QUESTION 5>
 
