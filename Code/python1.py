@@ -26,21 +26,31 @@
 
 	# <EXAMPLES>
 
-	# one("hi","hello") → "hello"
-	# one("three", "two") → "three"
-	# one("three", "hello") → "three hello"
+		# one("hi","hello") → "hello"
+		# one("three", "two") → "three"
+		# one("three", "hello") → "three hello"
 
 	# <HINT>
 
-	# What was the name of the function we have seen to check the length of a container?  Use your CLI to access the Python documentation and get help(len).
-
-def one(input1, input2):
-	return ""
-	
+	# What was the name of the function we have seen to check the length of a container? 
+	# Use your CLI to access the Python documentation and get help(len).
 
 
 
+def one(string1, string2):
+	#string1 = input("Input a string :")
+	#string2 = input("Input a string :")
+	if len(string1) > len(string2):
+		return string1
+	elif len(string1) < len(string2):
+		return string2
+	else :
+		return string1+ " "+string2
 
+
+print(one("hi","hello"))
+# one("three", "two") 
+# one("three", "hello")
 
 	# <QUESTION 2>
 
@@ -60,14 +70,18 @@ def one(input1, input2):
 
 	# <HINT>
 
-	# What was the name of the function we have seen to seperate a String? How can we make a string all upper or lower case?
+	# What was the name of the function we have seen to seperate a String? 
+	#How can we make a string all upper or lower case?
 	
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
-def two(input):
-	return ""
+def two(string):
+	string.lower().split("bert")
 
+	return string.lower().split("bert",-1)
 
+print(two("bertclivebert"))
+print(two("xxBertfridgebERtyy"))
 
 
 	# <QUESTION 3>
